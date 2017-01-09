@@ -8,6 +8,17 @@
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="PDFGenerator">
+        <param name="android-package" value="com.html2pdf.generator.PDFGenerator" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="cdvfile:*" />
     <name>HelloCordova</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
