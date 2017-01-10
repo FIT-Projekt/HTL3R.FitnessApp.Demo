@@ -7,23 +7,13 @@ function onDeviceReady(){
 function algorithmus(){
     if(localStorage.getItem("split") == "2er-Split"){
         alert("ja 2er-Split");
+        document.getElementById("")
     }else if(localStorage.getItem("split") == "3er-Split"){
         alert("ja 3er-Split");
     }else if(localStorage.getItem("split") == "4er-Split"){
         alert("ja 4er-Split");
     }
-
-
-
-
-
 }
-
-
-
-
-
-
 
 function createFile(){
     var doc = new jsPDF();
