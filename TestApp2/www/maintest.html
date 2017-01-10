@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Back Button Example</title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            
+        }
+        div{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        div p{
+            text-align: center;
+            width: 90vw;
+            padding-top: 10vh;
+            padding-bottom: 10vh;
+            border:1px solid black;
+        }
+        div p:active{
+            background-color: gray;
+        }
+        
+        nav {
+			height:14vh;
+			position:fixed;
+			width:100%;
+			left:0;
+			bottom:0;
+			border:1px solid;
+		}
+			
+		.info {
+			text-align:center;
+			position:fixed;
+			height:14vh;
+			width:33.3%;
+			left:0;
+			bottom:0;
+			border-left:1px solid;
+		}
+			
+		.plan {
+			text-align:center;
+			position:fixed;
+			height:14vh;
+			width:33.3%;
+			left:33.3%;
+			bottom:0;
+			border-right:1px solid;
+			border-left:1px solid;
+		}
+			
+		.settings {
+			text-align:center;
+			position:fixed;
+			height:14vh;
+			width:33.3%;
+			left:66.6%;
+			bottom:0;
+			border-right:1px solid;
+		}
+			
+		img {
+			height:13.9vh;
+			width:14vh;
+		}
+			
+		.navsettings {
+			padding:5px;
+			height:12.5vh;
+			width:12.5vh;
+		}
+			
+    </style>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript">
+
+    // Wait for device API libraries to load
+    //
+    var h;
+    var w;
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Register the event listener
+     
+        document.addEventListener("backbutton", onBackKeyDown, false);
+    }
+
+    // Handle the back button
+    //
+    function onBackKeyDown() {
+    	alert("You can't go Back!!");
+    }
+
+    window.addEventListener('load', function() {
+        document.body.addEventListener('touchmove', function(e) {
+            e.preventDefault();
+        }, false);
+    }, false);
+    
+
+   
+
+    </script>
+  </head>
+  <body onload="onLoad()">
+  	<div id="geschlaecht">
+        <p id="man">Männlich</p>
+        <p id="frau">Weiblich</p> 
+    </div>
+    <div id="erfahrung">
+        <p id="fort">Fortgeschritten</p>
+        <p id="anf">Anfänger</p> 
+    </div>
+    <div id="typ">
+        <p id="endo">Endomorph</p>
+        <p id="erdo">Erdomorph</p>
+        <p id="meso">Mesomorph</p> 
+    </div>
+    <div id="art">
+        <p id="aufbau">Muskelaufbau</p>
+        <p id="abnehmen">Abnehmen</p>
+        <p id="fitness">Fitness</p> 
+    </div>
+     <div id="split">
+        <p id="zwei">2er-Split</p>
+        <p id="drei">3er-Split</p>
+        <p id="vier">4er-Split</p> 
+    </div>
+    
+    <nav>
+		<div class="info">
+			<img src="img/navinfo.png">
+		</div>
+		<div class="plan">
+			<img src="img/navplan.jpg">
+		</div>
+		<div class="settings">
+			<img src="img/navsettings.jpg" class="navsettings">
+		</div>
+	</nav>
+    
+    <script type="text/javascript">
+    h = $(window).height();
+
+        $("#man").click(function(){
+            localStorage.setItem("geschlaecht","Mann");
+            window.scrollTo(0,h);
+        });
+        $("#frau").click(function(){
+            localStorage.setItem("geschlaecht","Frau");
+            window.scrollTo(0,h);
+        });
+
+
+
+
+        $("#fort").click(function(){
+            localStorage.setItem("erfahrung","Fortgeschritten");
+            window.scrollTo(0,h*2);
+        });
+        $("#anf").click(function(){
+            localStorage.setItem("erfahrung","Anfänger");
+            window.scrollTo(0,h*2);
+        });
+
+
+        $("#endo").click(function(){
+            localStorage.setItem("typ","Endomorph");
+            window.scrollTo(0,h*3);
+        });
+        $("#erdo").click(function(){
+            localStorage.setItem("typ","Erdomorph");
+            window.scrollTo(0,h*3);
+        });
+        $("#meso").click(function(){
+            localStorage.setItem("typ","Mesomorph");
+            window.scrollTo(0,h*3);
+        });
+
+
+
+
+        $("#aufbau").click(function(){
+            localStorage.setItem("art","Muskelaufbau");
+            window.scrollTo(0,h*4);
+        });
+        $("#abnehmen").click(function(){
+            localStorage.setItem("art","Abnehmen");
+            window.scrollTo(0,h*4);
+        });
+        $("#fitness").click(function(){
+            localStorage.setItem("art","Fitness");
+            window.scrollTo(0,h*4);
+        });
+
+        function onConfirm(buttonIndex) {
+            if(buttonIndex == 1){
+                window.location = "plan.html";
+            }else{
+                localStorage.setItem("geschlaecht","");
+                localStorage.setItem("erfahrung","");
+                localStorage.setItem("typ","");
+                localStorage.setItem("art","");
+                localStorage.setItem("split","");
+                window.scrollTo(0,0);
+            }
+        }
+
+        function confirmDialog(){
+            navigator.notification.confirm(
+                "Geschlächt: " + localStorage.getItem("geschlaecht") + "\n" + 
+                "Erfahrung: " + localStorage.getItem("erfahrung") + "\n" + 
+                "Typ: " + localStorage.getItem("typ") + "\n" + 
+                "Art: " + localStorage.getItem("art") + "\n" + 
+                "Split: " + localStorage.getItem("split") + "\n",
+                onConfirm,
+                'Passen diese Einstellungen?',
+                ['Ja','Nein']
+            );
+        }
+
+        $("#zwei").click(function(){
+            localStorage.setItem("split","2er-Split");
+            confirmDialog();
+        });
+
+        $("#drei").click(function(){
+            localStorage.setItem("split","3er-Split");
+            confirmDialog();
+        });
+
+        $("#vier").click(function(){
+            localStorage.setItem("split","4er-Split");
+            confirmDialog();
+        });
+
+    </script>
+
+  </body>
+</html>
