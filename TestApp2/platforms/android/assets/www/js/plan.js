@@ -2,16 +2,76 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady(){
     algorithmus();
+    document.addEventListener("backbutton", onBackKeyDown, false);
+}
+
+function onBackKeyDown() {
+    window.location = "maintest.html";            
 }
 
 function algorithmus(){
     if(localStorage.getItem("split") == "2er-Split"){
-        alert("ja 2er-Split");
-        document.getElementById("")
+        var c, r, t;
+        t = document.createElement('table');
+
+        r = t.insertRow(0);
+        c = r.insertCell(0);
+        c.colSpan = 3;
+        c.innerHTML = "Tag 1";
+        c.style.fontWeight = "bold";
+
+        r = t.insertRow(1); 
+        c = r.insertCell(0);
+        c.innerHTML = "Übung";
+        c.style.fontWeight = "bold";
+        c = r.insertCell(1);
+        c.innerHTML = "Sätze";
+        c.style.fontWeight = "bold";
+        c = r.insertCell(2);
+        c.innerHTML = "Wdh.";
+        c.style.fontWeight = "bold";
+
+        r = t.insertRow(2); 
+        c = r.insertCell(0);
+        c.innerHTML = "Kreuzheben";
+        c = r.insertCell(1);
+        c.innerHTML = 3;
+        c = r.insertCell(2);
+        c.innerHTML = 12;
+
+        document.body.appendChild(t);
+
     }else if(localStorage.getItem("split") == "3er-Split"){
-        alert("ja 3er-Split");
+        var c, r, t;
+        t = document.createElement('table');
+
+        r = t.insertRow(0);
+        c = r.insertCell(0);
+        c.colSpan = 3;
+        c.innerHTML = "Tag 1";
+        c.style.fontWeight = "bold";
+
+        r = t.insertRow(1); 
+        c = r.insertCell(0);
+        c.innerHTML = "Übung";
+        c.style.fontWeight = "bold";
+        c = r.insertCell(1);
+        c.innerHTML = "Sätze";
+        c.style.fontWeight = "bold";
+        c = r.insertCell(2);
+        c.innerHTML = "Wdh.";
+        c.style.fontWeight = "bold";
+
+        r = t.insertRow(2); 
+        c = r.insertCell(0);
+        c.innerHTML = "Kreuzheben";
+        c = r.insertCell(1);
+        c.innerHTML = 3;
+        c = r.insertCell(2);
+        c.innerHTML = 12;
+        
     }else if(localStorage.getItem("split") == "4er-Split"){
-        alert("ja 4er-Split");
+        
     }
 }
 

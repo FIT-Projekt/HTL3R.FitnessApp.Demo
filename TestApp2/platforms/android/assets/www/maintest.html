@@ -14,7 +14,7 @@
            
         }
         div{
-            height: calc(100vh - 14vh);
+            height: calc(100vh - 5vh);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -23,64 +23,28 @@
         div h2{
             text-align: center;
             width: 90vw;
-            padding-top: 7vh;
-            padding-bottom: 7vh;
+            padding-top: 5vh;
+            padding-bottom: 5vh;
             background-color: #3fc7f1;
             color: white;
         }
         
         nav {
-			height:14vh;
+			height:5vh;
 			position:fixed;
 			width:100%;
 			left:0;
 			bottom:0;
-			border:1px solid;
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
 		}
-			
-		.info {
-			text-align:center;
-			position:fixed;
-			height:14vh;
-			width:33.3%;
-			left:0;
-			bottom:0;
-			border-left:1px solid;
-            background-color: white;
-		}
-			
-		.plan {
-			text-align:center;
-			position:fixed;
-			height:14vh;
-			width:33.3%;
-			left:33.3%;
-			bottom:0;
-			border-right:1px solid;
-			border-left:1px solid;
-            background-color: white;
-		}
-			
-		.settings {
-			text-align:center;
-			position:fixed;
-			height:14vh;
-			width:33.3%;
-			left:66.6%;
-			bottom:0;
-			border-right:1px solid;
-            background-color: white;
-		}
-			
+        	
 		img {
-			height:13.9vh;
-			width:14vh;
-		}
-			
-		.navsettings {
-			padding:5px;
-			height:12.5vh;
-			width:12.5vh;
+			width:5vh;
 		}
 			
     </style>
@@ -88,180 +52,178 @@
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript">
 
-    // Wait for device API libraries to load
-    //
-    var h;
-    var w;
-    function onLoad() {
-        document.addEventListener("deviceready", onDeviceReady, false);
-    }
+        // Wait for device API libraries to load
+        //
+        var h;
+        var w;
+        function onLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
 
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        // Register the event listener
-     
-        document.addEventListener("backbutton", onBackKeyDown, false);
-    }
+        // device APIs are available
+        //
+        function onDeviceReady() {
+            // Register the event listener
+         
+            document.addEventListener("backbutton", onBackKeyDown, false);
+        }
 
-    // Handle the back button
-    //
-    function onBackKeyDown() {
-    	alert("You can't go Back!!");
-    }
+        // Handle the back button
+        //
+        function onBackKeyDown() {
+        	
+        }
 
-    window.addEventListener('load', function() {
-        document.body.addEventListener('touchmove', function(e) {
-            e.preventDefault();
+        window.addEventListener('load', function() {
+            document.body.addEventListener('touchmove', function(e) {
+                e.preventDefault();
+            }, false);
         }, false);
-    }, false);
-    
 
-   
+        </script>
+    </head>
+    <body onload="onLoad()">
+        <div id="geschlaecht">
+            <h2 id="man">Männlich</h2>
+            <h2 id="frau">Weiblich</h2> 
+        </div>
+        <div id="erfahrung">
+            <h2 id="fort">Fortgeschritten</h2>
+            <h2 id="anf">Anfänger</h2> 
+        </div>
+        <div id="typ">
+            <h2 id="endo">Endomorph</h2>
+            <h2 id="erdo">Erdomorph</h2>
+            <h2 id="meso">Mesomorph</h2> 
+        </div>
+        <div id="art">
+            <h2 id="aufbau">Muskelaufbau</h2>
+            <h2 id="abnehmen">Abnehmen</h2>
+            <h2 id="fitness">Fitness</h2> 
+        </div>
+        <div id="split">
+            <h2 id="zwei">2er-Split</h2>
+            <h2 id="drei">3er-Split</h2>
+            <h2 id="vier">4er-Split</h2> 
+        </div>
+         <div>&nbsp;</div>
+        <nav>
+    		
+    			<img id="info" src="img/navinfo_white.png">
+    		
+    			<img src="img/navplan_blue.png">
+    		
+    			<img id="settings" src="img/navsettings_white.png">
+    		
+    	</nav>
+        
+        <script type="text/javascript">
+        var heightOfNav = $("nav").height();
+        var h = window.innerHeight;
+        h = h - heightOfNav;
+        console.log(heightOfNav);
 
-    </script>
-  </head>
-  <body onload="onLoad()">
-  	<div id="geschlaecht">
-        <h2 id="man">Männlich</h2>
-        <h2 id="frau">Weiblich</h2> 
-    </div>
-    <div id="erfahrung">
-        <h2 id="fort">Fortgeschritten</h2>
-        <h2 id="anf">Anfänger</h2> 
-    </div>
-    <div id="typ">
-        <h2 id="endo">Endomorph</h2>
-        <h2 id="erdo">Erdomorph</h2>
-        <h2 id="meso">Mesomorph</h2> 
-    </div>
-    <div id="art">
-        <h2 id="aufbau">Muskelaufbau</h2>
-        <h2 id="abnehmen">Abnehmen</h2>
-        <h2 id="fitness">Fitness</h2> 
-    </div>
-     <div id="split">
-        <h2 id="zwei">2er-Split</h2>
-        <h2 id="drei">3er-Split</h2>
-        <h2 id="vier">4er-Split</h2> 
-    </div>
-     <div>&nbsp;</div>
-
-    <nav>
-		<div class="info">
-			<img src="img/navinfo.png">
-		</div>
-		<div class="plan">
-			<img src="img/navplan.jpg">
-		</div>
-		<div class="settings">
-			<img src="img/navsettings.jpg" class="navsettings">
-		</div>
-	</nav>
-    
-    <script type="text/javascript">
-    var heightOfNav = $("nav").height();
-    var h = window.innerHeight;
-    h = h - heightOfNav;
-    console.log(heightOfNav);
-
-        $("#man").click(function(){
-            localStorage.setItem("geschlaecht","Mann");
-            window.scrollTo(0,h);
-        });
-        $("#frau").click(function(){
-            localStorage.setItem("geschlaecht","Frau");
-            window.scrollTo(0,h);
-        });
+            $("#man").click(function(){
+                localStorage.setItem("geschlaecht","Mann");
+                window.scrollTo(0,h);
+            });
+            $("#frau").click(function(){
+                localStorage.setItem("geschlaecht","Frau");
+                window.scrollTo(0,h);
+            });
 
 
 
 
-        $("#fort").click(function(){
-            localStorage.setItem("erfahrung","Fortgeschritten");
-            window.scrollTo(0,h*2);
-        });
-        $("#anf").click(function(){
-            localStorage.setItem("erfahrung","Anfänger");
-            window.scrollTo(0,h*2);
-        });
+            $("#fort").click(function(){
+                localStorage.setItem("erfahrung","Fortgeschritten");
+                window.scrollTo(0,h*2);
+            });
+            $("#anf").click(function(){
+                localStorage.setItem("erfahrung","Anfänger");
+                window.scrollTo(0,h*2);
+            });
 
 
-        $("#endo").click(function(){
-            localStorage.setItem("typ","Endomorph");
-            window.scrollTo(0,h*3);
-        });
-        $("#erdo").click(function(){
-            localStorage.setItem("typ","Erdomorph");
-            window.scrollTo(0,h*3);
-        });
-        $("#meso").click(function(){
-            localStorage.setItem("typ","Mesomorph");
-            window.scrollTo(0,h*3);
-        });
+            $("#endo").click(function(){
+                localStorage.setItem("typ","Endomorph");
+                window.scrollTo(0,h*3);
+            });
+            $("#erdo").click(function(){
+                localStorage.setItem("typ","Erdomorph");
+                window.scrollTo(0,h*3);
+            });
+            $("#meso").click(function(){
+                localStorage.setItem("typ","Mesomorph");
+                window.scrollTo(0,h*3);
+            });
 
 
 
 
-        $("#aufbau").click(function(){
-            localStorage.setItem("art","Muskelaufbau");
-            window.scrollTo(0,h*4);
-        });
-        $("#abnehmen").click(function(){
-            localStorage.setItem("art","Abnehmen");
-            window.scrollTo(0,h*4);
-        });
-        $("#fitness").click(function(){
-            localStorage.setItem("art","Fitness");
-            window.scrollTo(0,h*4);
-        });
+            $("#aufbau").click(function(){
+                localStorage.setItem("art","Muskelaufbau");
+                window.scrollTo(0,h*4);
+            });
+            $("#abnehmen").click(function(){
+                localStorage.setItem("art","Abnehmen");
+                window.scrollTo(0,h*4);
+            });
+            $("#fitness").click(function(){
+                localStorage.setItem("art","Fitness");
+                window.scrollTo(0,h*4);
+            });
 
-        function onConfirm(buttonIndex) {
-            if(buttonIndex == 1){
-                window.location = "plan.html";
-            }else{
-                localStorage.setItem("geschlaecht","");
-                localStorage.setItem("erfahrung","");
-                localStorage.setItem("typ","");
-                localStorage.setItem("art","");
-                localStorage.setItem("split","");
-                window.scrollTo(0,0);
+            function onConfirm(buttonIndex) {
+                if(buttonIndex == 1){
+                    window.location = "plan.html";
+                }else{
+                    localStorage.setItem("geschlaecht","");
+                    localStorage.setItem("erfahrung","");
+                    localStorage.setItem("typ","");
+                    localStorage.setItem("art","");
+                    localStorage.setItem("split","");
+                    window.scrollTo(0,0);
+                }
             }
-        }
 
-        function confirmDialog(){
-            navigator.notification.confirm(
-                "Geschlächt: " + localStorage.getItem("geschlaecht") + "\n" + 
-                "Erfahrung: " + localStorage.getItem("erfahrung") + "\n" + 
-                "Typ: " + localStorage.getItem("typ") + "\n" + 
-                "Art: " + localStorage.getItem("art") + "\n" + 
-                "Split: " + localStorage.getItem("split") + "\n",
-                onConfirm,
-                'Passen diese Einstellungen?',
-                ['Ja','Nein']
-            );
-        }
+            function confirmDialog(){
+                navigator.notification.confirm(
+                    "Geschlächt: " + localStorage.getItem("geschlaecht") + "\n" + 
+                    "Erfahrung: " + localStorage.getItem("erfahrung") + "\n" + 
+                    "Typ: " + localStorage.getItem("typ") + "\n" + 
+                    "Art: " + localStorage.getItem("art") + "\n" + 
+                    "Split: " + localStorage.getItem("split") + "\n",
+                    onConfirm,
+                    'Passen diese Einstellungen?',
+                    ['Ja','Nein']
+                );
+            }
 
-        $("#zwei").click(function(){
-            localStorage.setItem("split","2er-Split");
-            confirmDialog();
-        });
+            $("#zwei").click(function(){
+                localStorage.setItem("split","2er-Split");
+                confirmDialog();
+            });
 
-        $("#drei").click(function(){
-            localStorage.setItem("split","3er-Split");
-            confirmDialog();
-        });
+            $("#drei").click(function(){
+                localStorage.setItem("split","3er-Split");
+                confirmDialog();
+            });
 
-        $("#vier").click(function(){
-            localStorage.setItem("split","4er-Split");
-            confirmDialog();
-        });
+            $("#vier").click(function(){
+                localStorage.setItem("split","4er-Split");
+                confirmDialog();
+            });
 
-        $(".info").click(function(){
-            window.location = "about.html";
-        });
+            $("#info").click(function(){
+                window.location = "about.html";
+            });
 
-    </script>
+            $("#settings").click(function(){
+                navigator.notification.alert("Diese Funktion ist derzeit noch nicht verfügbar", function(){}, "Fehler", "OK");
+            });
+
+        </script>
 
   </body>
 </html>

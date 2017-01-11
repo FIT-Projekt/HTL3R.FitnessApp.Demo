@@ -2,98 +2,78 @@
 <html>
 	<head>
 		<title>About</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<style type="text/css">
-			section {
-				display:block;
-				width:90%;
-				margin:0 auto;
+			body {
+				
 			}
 			
-			nav {
-				height:14vh;
-				position:fixed;
-				width:100%;
-				left:0;
-				bottom:0;
-				border:1px solid;
-			}
 			
-			.info {
-				text-align:center;
-				position:fixed;
-				height:14vh;
-				width:33.3%;
-				left:0;
-				bottom:0;
-				border-left:1px solid;
-			}
+			 nav {
+			height:5vh;
+			position:fixed;
+			width:100%;
+			left:0;
+			bottom:0;
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+		}
+        	
+		img {
+			width:5vh;
+		}
+		#wrapper{
 			
-			.plan {
-				text-align:center;
-				position:fixed;
-				height:14vh;
-				width:33.3%;
-				left:33.3%;
-				bottom:0;
-				border-right:1px solid;
-				border-left:1px solid;
-			}
+			text-align: center;
+		}
+		h1{
+			color:#3fc7f1;
+		}
 			
-			.settings {
-				text-align:center;
-				position:fixed;
-				height:14vh;
-				width:33.3%;
-				left:66.6%;
-				bottom:0;
-				border-right:1px solid;
-			}
-			
-			img {
-				height:13.9vh;
-				width:14vh;
-			}
-			
-			.navsettings {
-				padding:5px;
-				height:12.5vh;
-				width:12.5vh;
-			}
 			
 		</style>
+		 <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 	</head>
 	<body>
-		<section>
-			<center> <h1>Kontakt</h1> </center>
-				<p>FIT@gmail.com</p>
-			<center> <h1>Über Uns</h1> </center>
-				<p>Wir sind alle ganz toll und lieb zu einander :)</p>
+		<div id="wrapper">
+			<h1>Kontakt</h1>
+			FIT@gmail.com
+				
+			<h1>Über Uns</h1>
+				Wir sind alle ganz toll und lieb :)
 			
-			<center> <h1>Das Team</h1> </center>
-				<p>Jessica Janoch - Projektleiterin</p>
-				<p>Katja Höbart - Projektstellvertreterin</p>
-				<p>Fabian Gartner - Programmierung</p>
-				<p>Sebastian Herberth - Design</p>
-				<p>Niklas Kienreich - Dokumentation</p>
+			<h1>Das Team</h1>
+				Jessica Janoch - Projektleiterin<br>
+				Katja Höbart - Projektstellvertreterin<br>
+				Fabian Gartner - Programmierung<br>
+				Sebastian Herberth - Design<br>
+				Niklas Kienreich - Dokumentation
 				
 				<center>
 					<a href="index.html">
 						<button>Zurück zum Tutorial</button>
 					</a>
 				</center>	
-		</section>
-	
-		<!-- Footer bzw. Navbar -->
-		<nav>
-			<div class="info">
-				<img src="img/navinfo.png">
-			</div>
-			<div class="plan">
-				<img src="img/navplan.jpg">
-			</div>
-			<div class="settings">
-				<img src="img/navsettings.jpg" class="navsettings">
-			</div>
-		</nav>
+		</div>
+		 <nav>
+    			<img id="info" src="img/navinfo_blue.png">
+    		
+    			<img id="main" src="img/navplan_white.png">
+    		
+    			<img id="settings" src="img/navsettings_white.png">    		
+    	</nav>
+    	<script type="text/javascript">
+    		 $("#settings").click(function(){
+                navigator.notification.alert("Diese Funktion ist derzeit noch nicht verfügbar", function(){}, "Fehler", "OK");
+            });
+
+    		 $("#main").click(function(){
+                window.location = "maintest.html";
+            });
+    	</script>
 	</body>
 </html>
