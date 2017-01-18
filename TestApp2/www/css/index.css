@@ -2,6 +2,10 @@
 	padding: 0;
 	margin: 0;
 	text-decoration: none;
+
+}
+*:focus{
+	outline: none;
 }
 html, body{
 	height: 100vh;
@@ -37,4 +41,33 @@ a{
 	right: 0px;
 	margin-right: 20px;
 	margin-top: 20px;
+}
+
+li{
+	list-style-type: none;
+}
+
+ul{
+	display: flex;
+	justify-content: space-around;
+}
+
+.slick-dots li button {
+border:none;
+ border-radius: 50%;
+ background-color: black;
+ width: 10px;
+ height: 10px;
+ font-size: 0px;
+}
+li.slick-active button {
+ background-color:white;
+ color: white;
+
+}
+
+.slick-dots{
+	margin-top: 20px !important;
+	width: 100px;
+	margin: 0 auto;
 }
