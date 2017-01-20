@@ -718,10 +718,28 @@ function createFile(){
                 var rows = data.table.rows;
                 if (data.row.index == 0) {
                     doc.setFillColor(63, 199, 241);
+                    doc.setTextColor(255,255,255);
                 }
+            },
+            drawHeaderCell: function(cell, data){
+                doc.setFillColor(63, 199, 241);
+
             }
         });
-        doc.autoTable(res2.columns, res2.data, {startY:doc.autoTable.previous.finalY + 15});
+        doc.autoTable(res2.columns, res2.data, {
+            startY:doc.autoTable.previous.finalY + 15,
+            drawCell: function(cell, data) {
+                var rows = data.table.rows;
+                if (data.row.index == 0) {
+                    doc.setFillColor(63, 199, 241);
+                    doc.setTextColor(255,255,255);
+                }
+            },
+            drawHeaderCell: function(cell, data){
+                doc.setFillColor(63, 199, 241);
+
+            }
+        });
         
     }else if(document.getElementsByTagName("table").length == 3){
         var res1 = doc.autoTableHtmlToJson(document.getElementById("table1"));
