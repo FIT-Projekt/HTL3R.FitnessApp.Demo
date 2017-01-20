@@ -709,11 +709,14 @@ function checkData4(){
 
 function createFile(){
     var doc = new jsPDF();
-    doc.text(20, 20, localStorage.getItem("geschlaecht"));
+    /*doc.text(20, 20, localStorage.getItem("geschlaecht"));
     doc.text(20, 40, localStorage.getItem("erfahrung"));
     doc.text(20, 60, localStorage.getItem("typ"));
     doc.text(20, 80, localStorage.getItem("art"));
-    doc.text(20, 100, localStorage.getItem("split"));
+    doc.text(20, 100, localStorage.getItem("split"));*/
+    
+    var res = doc.autoTableHtmlToJson(document.getElementById("table1"));
+    doc.autoTable(res.columns, res.data);
     var pdfOutput = doc.output();
     if(device.platform == "Android"){
         window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, function(dir){
@@ -744,6 +747,7 @@ function createTable(){
     if(localStorage.getItem("split") == "2er-Split"){
         checkData2();
         t = document.createElement('table');
+        t.id = "table1";
 
         r = t.insertRow(0);
         r.className = "day";
@@ -1357,12 +1361,17 @@ function createTable(){
 
         t.style.marginTop = "8px";      
     }
+    createButton();
+}
 
+function createButton(){
     b = document.createElement("button");
     b.id = "export";
     b.appendChild(document.createTextNode("Export to PDF"));
     document.body.appendChild(b);
     b.addEventListener("click",function(){
-        createFile();
-    });
+                       alert("kalsjd");
+                       createFile();
+                       });
+
 }
