@@ -708,15 +708,31 @@ function checkData4(){
 }
 
 function createFile(){
-    var doc = new jsPDF();
-    /*doc.text(20, 20, localStorage.getItem("geschlaecht"));
-    doc.text(20, 40, localStorage.getItem("erfahrung"));
-    doc.text(20, 60, localStorage.getItem("typ"));
-    doc.text(20, 80, localStorage.getItem("art"));
-    doc.text(20, 100, localStorage.getItem("split"));*/
-    
-    var res = doc.autoTableHtmlToJson(document.getElementById("table1"));
-    doc.autoTable(res.columns, res.data);
+    var doc = new jsPDF("p","pt","a4");
+    if(document.getElementsByTagName("table").length == 2){
+        var res1 = doc.autoTableHtmlToJson(document.getElementById("table1"));
+        var res2 = doc.autoTableHtmlToJson(document.getElementById("table2"));
+        doc.autoTable(res1.columns, res1.data, {startY:20});
+        doc.autoTable(res2.columns, res2.data, {startY:doc.autoTable.previous.finalY + 15});
+        
+    }else if(document.getElementsByTagName("table").length == 3){
+        var res1 = doc.autoTableHtmlToJson(document.getElementById("table1"));
+        var res2 = doc.autoTableHtmlToJson(document.getElementById("table2"));
+        var res3 = doc.autoTableHtmlToJson(document.getElementById("table3"));
+        doc.autoTable(res1.columns, res1.data, {startY:20});
+        doc.autoTable(res2.columns, res2.data, {startY:doc.autoTable.previous.finalY + 15});
+        doc.autoTable(res3.columns, res3.data, {startY:doc.autoTable.previous.finalY + 15});
+    }else if(document.getElementsByTagName("table").length == 4){
+        var res1 = doc.autoTableHtmlToJson(document.getElementById("table1"));
+        var res2 = doc.autoTableHtmlToJson(document.getElementById("table2"));
+        var res3 = doc.autoTableHtmlToJson(document.getElementById("table3"));
+        var res4 = doc.autoTableHtmlToJson(document.getElementById("table4"));
+        doc.autoTable(res1.columns, res1.data, {startY:20});
+        doc.autoTable(res2.columns, res2.data, {startY:doc.autoTable.previous.finalY + 15});
+        doc.autoTable(res3.columns, res3.data, {startY:doc.autoTable.previous.finalY + 15});
+        doc.autoTable(res4.columns, res4.data, {startY:doc.autoTable.previous.finalY + 15});
+    }
+
     var pdfOutput = doc.output();
     if(device.platform == "Android"){
         window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, function(dir){
@@ -752,9 +768,10 @@ function createTable(){
         r = t.insertRow(0);
         r.className = "day";
         c = r.insertCell(0);
-        c.colSpan = 3;
         c.innerHTML = "Tag 1";
         c.style.fontWeight = "bold";
+        c = r.insertCell(1);
+        c = r.insertCell(2);
 
         r = t.insertRow(1);
         r.className = "desc"; 
@@ -836,13 +853,15 @@ function createTable(){
 
 
         t = document.createElement('table');
-
+        t.id = "table2";
+        
         r = t.insertRow(0);
         r.className = "day";
         c = r.insertCell(0);
-        c.colSpan = 3;
         c.innerHTML = "Tag 2";
         c.style.fontWeight = "bold";
+        c = r.insertCell(1);
+        c = r.insertCell(2);
 
         r = t.insertRow(1); 
         r.className = "desc";
@@ -914,13 +933,15 @@ function createTable(){
         checkData3();
 
         t = document.createElement('table');
-
+        t.id = "table1";
+        
         r = t.insertRow(0);
         r.className = "day";
         c = r.insertCell(0);
-        c.colSpan = 3;
         c.innerHTML = "Tag 1";
         c.style.fontWeight = "bold";
+        c = r.insertCell(1);
+        c = r.insertCell(2);
 
         r = t.insertRow(1);
         r.className = "desc";
@@ -985,13 +1006,15 @@ function createTable(){
         document.body.appendChild(t);
 
         t = document.createElement('table');
+        t.id = "table2";
 
         r = t.insertRow(0);
         r.className = "day";
         c = r.insertCell(0);
-        c.colSpan = 3;
         c.innerHTML = "Tag 2";
         c.style.fontWeight = "bold";
+        c = r.insertCell(1);
+        c = r.insertCell(2);
 
         r = t.insertRow(1);
         r.className = "desc";
@@ -1051,13 +1074,15 @@ function createTable(){
 
 
         t = document.createElement('table');
+        t.id = "table3";
 
         r = t.insertRow(0);
         r.className = "day";
         c = r.insertCell(0);
-        c.colSpan = 3;
         c.innerHTML = "Tag 3";
         c.style.fontWeight = "bold";
+        c = r.insertCell(1);
+        c = r.insertCell(2);
 
         r = t.insertRow(1);
         r.className = "desc";
@@ -1119,14 +1144,16 @@ function createTable(){
         checkData4();
 
         t = document.createElement('table');
+        t.id = "table1";
 
         r = t.insertRow(0);
         r.className = "day";
         c = r.insertCell(0);
-        c.colSpan = 3;
         c.innerHTML = "Tag 1";
         c.style.fontWeight = "bold";
-
+        c = r.insertCell(1);
+        c = r.insertCell(2);
+        
         r = t.insertRow(1);
         r.className = "desc";
         c = r.insertCell(0);
@@ -1182,13 +1209,15 @@ function createTable(){
         document.body.appendChild(t);
 
         t = document.createElement('table');
+        t.id = "table2";
 
         r = t.insertRow(0);
         r.className = "day";
         c = r.insertCell(0);
-        c.colSpan = 3;
         c.innerHTML = "Tag 2";
         c.style.fontWeight = "bold";
+        c = r.insertCell(1);
+        c = r.insertCell(2);
 
         r = t.insertRow(1);
         r.className = "desc";
@@ -1231,13 +1260,15 @@ function createTable(){
         t.style.marginTop = "8px";
 
         t = document.createElement('table');
+        t.id = "table3";
 
         r = t.insertRow(0);
         r.className = "day";
         c = r.insertCell(0);
-        c.colSpan = 3;
         c.innerHTML = "Tag 3";
         c.style.fontWeight = "bold";
+        c = r.insertCell(1);
+        c = r.insertCell(2);
 
         r = t.insertRow(1);
         r.className = "desc";
@@ -1297,13 +1328,15 @@ function createTable(){
 
 
         t = document.createElement('table');
+        t.id = "table4";
 
         r = t.insertRow(0);
         r.className = "day";
         c = r.insertCell(0);
-        c.colSpan = 3;
         c.innerHTML = "Tag 4";
         c.style.fontWeight = "bold";
+        c = r.insertCell(1);
+        c = r.insertCell(2);
 
         r = t.insertRow(1);
         r.className = "desc"; 
@@ -1370,8 +1403,6 @@ function createButton(){
     b.appendChild(document.createTextNode("Export to PDF"));
     document.body.appendChild(b);
     b.addEventListener("click",function(){
-                       alert("kalsjd");
-                       createFile();
-                       });
-
+        createFile();
+    });
 }
