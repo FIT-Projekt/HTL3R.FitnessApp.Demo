@@ -26,6 +26,9 @@
         <param name="ios-package" value="CDVSplashScreen" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
+    </feature>
     <name>
         Fitness-App
     </name>
@@ -62,7 +65,4 @@
     <preference name="SplashScreenDelay" value="3000" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="ShowSplashScreenSpinner" value="false" />
-    <feature name="Device">
-        <param name="ios-package" value="CDVDevice" />
-    </feature>
 </widget>
