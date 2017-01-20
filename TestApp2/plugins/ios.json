@@ -18,6 +18,9 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.htl3r.fitnessapp"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.htl3r.fitnessapp"
         }
     },
     "dependent_plugins": {

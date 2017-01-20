@@ -715,8 +715,18 @@ function createFile(){
     doc.text(20, 80, localStorage.getItem("art"));
     doc.text(20, 100, localStorage.getItem("split"));
     var pdfOutput = doc.output();
-
-    window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, function(dir){
+    /*window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, function(dir){
+        dir.getFile("Trainingsplan.pdf", {create: true}, function (file){
+            file.createWriter(function(writer){
+                writer.write( pdfOutput );
+            },function(error){
+                alert("Error" + error);
+            });
+            navigator.notification.alert("Dein Trainingsplan befinet sich nun unter: " + "\n\n" + file.toURL(), function(){}, "Erfolgreich als PDF exportiert", "OK");
+        });
+    });*/
+    window.resolveLocalFileSystemURL(cordova.file.dataDirectory, function(dir){
+        alert("Jaaaa");
         dir.getFile("Trainingsplan.pdf", {create: true}, function (file){
             file.createWriter(function(writer){
                 writer.write( pdfOutput );

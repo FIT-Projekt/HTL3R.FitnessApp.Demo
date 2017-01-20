@@ -16,7 +16,9 @@
         <param name="onload" value="true" />
     </feature>
     <allow-navigation href="cdvfile:*" />
-    <name>Fitness-App</name>
+    <name>
+        Fitness-App
+    </name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
@@ -37,4 +39,7 @@
     <preference name="SplashScreenDelay" value="3000" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="ShowSplashScreenSpinner" value="false" />
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
 </widget>

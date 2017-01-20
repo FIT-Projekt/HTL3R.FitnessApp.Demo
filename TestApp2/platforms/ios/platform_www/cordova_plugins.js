@@ -188,6 +188,14 @@ module.exports = [
         "clobbers": [
             "navigator.splashscreen"
         ]
+    },
+    {
+        "id": "cordova-plugin-device.device",
+        "file": "plugins/cordova-plugin-device/www/device.js",
+        "pluginId": "cordova-plugin-device",
+        "clobbers": [
+            "device"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -197,7 +205,8 @@ module.exports.metadata =
     "cordova-plugin-dialogs": "1.3.1",
     "cordova-plugin-file": "4.3.1",
     "cordova-plugin-splashscreen": "4.0.1",
-    "cordova-plugin-whitelist": "1.3.1"
+    "cordova-plugin-whitelist": "1.3.1",
+    "cordova-plugin-device": "1.1.4"
 };
 // BOTTOM OF METADATA
 });
