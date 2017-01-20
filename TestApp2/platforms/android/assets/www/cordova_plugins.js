@@ -25,14 +25,6 @@ module.exports = [
         ]
     },
     {
-        "id": "com.html2pdf.generator.pdf",
-        "file": "plugins/com.html2pdf.generator/www/pdf.js",
-        "pluginId": "com.html2pdf.generator",
-        "clobbers": [
-            "pdf"
-        ]
-    },
-    {
         "id": "cordova-plugin-file.DirectoryEntry",
         "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
         "pluginId": "cordova-plugin-file",
@@ -212,7 +204,6 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.3.1",
     "cordova-plugin-splashscreen": "4.0.1",
     "cordova-plugin-dialogs": "1.3.1",
-    "com.html2pdf.generator": "0.7.0",
     "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-file": "4.3.1"
 };
