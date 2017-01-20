@@ -717,7 +717,6 @@ function createFile(){
     var pdfOutput = doc.output();
     if(device.platform == "Android"){
         window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, function(dir){
-            alert("Android");
             dir.getFile("Trainingsplan.pdf", {create: true}, function (file){
                 file.createWriter(function(writer){
                     writer.write( pdfOutput );
@@ -729,7 +728,6 @@ function createFile(){
         });
     }else if(device.platform == "iOS"){
         window.resolveLocalFileSystemURL(cordova.file.dataDirectory, function(dir){
-            alert("IOS");
             dir.getFile("Trainingsplan.pdf", {create: true}, function (file){
                 file.createWriter(function(writer){
                     writer.write( pdfOutput );
