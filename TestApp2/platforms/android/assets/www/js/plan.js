@@ -48,7 +48,7 @@ var beinPoUebungenFrauFort = new Array("Beinpresse","Beinstrecker","Kickbacks","
 
 //Mann Anfaenger uebungen
 var brustUebungenMannAnf = new Array("Bankdruecken","Kurzhantelschraegbankdr.","Pull Over");
-var schulterUebungenMannAnf = new Array("Reverse-Flies(KZ)","Frontheben(KZ)","Kurzhalntelschulterdruecken");
+var schulterUebungenMannAnf = new Array("Reverse-Flies(KZ)","Frontheben(KZ)","Kurzhantelschulterdr.");
 var bizepsUebungenMannAnf = new Array("Bizepscurls","Hammercurls","Langhantelcurls");
 var trizepsUebungenMannAnf = new Array("Trizepsdruecken(KZ)","Trizeps-Dips","Stirndruecken");
 var rueckenUebungenMannAnf = new Array("Lattzug","Rudern(KZ)","Klimmzuege");
@@ -57,7 +57,7 @@ var beinPoUebungenMannAnf = new Array("Beinpresse","Beinstrecker","Abduktion(KZ)
 
 //Mann Fortgeschritten uebungen
 var brustUebungenMannFort = new Array("Bankdruecken","Kurzhantelschraegbankdr.","Pull Over","Reverse-Flies(G)");
-var schulterUebungenMannFort = new Array("Reverse-Flies(KZ)","Frontheben(KZ)","Kurzhalntelschulterdruecken","Seitheben");
+var schulterUebungenMannFort = new Array("Reverse-Flies(KZ)","Frontheben(KZ)","Kurzhantelschulterdr.","Seitheben");
 var bizepsUebungenMannFort = new Array("Bizepscurls","Hammercurls","Langhantelcurls","Kurzhantelbizepscurls");
 var trizepsUebungenMannFort = new Array("Trizepsdruecken(KZ)","Trizeps-Dips","Stirndruecken");
 var rueckenUebungenMannFort = new Array("Lattzug","Rudern(KZ)","Klimmzuege","Kreuzheben","Langhantelrudern");
@@ -745,18 +745,109 @@ function createFile(){
         var res1 = doc.autoTableHtmlToJson(document.getElementById("table1"));
         var res2 = doc.autoTableHtmlToJson(document.getElementById("table2"));
         var res3 = doc.autoTableHtmlToJson(document.getElementById("table3"));
-        doc.autoTable(res1.columns, res1.data, {startY:20});
-        doc.autoTable(res2.columns, res2.data, {startY:doc.autoTable.previous.finalY + 15});
-        doc.autoTable(res3.columns, res3.data, {startY:doc.autoTable.previous.finalY + 15});
+        doc.autoTable(res1.columns, res1.data, {
+            startY:20,
+            drawCell: function(cell, data) {
+                var rows = data.table.rows;
+                if (data.row.index == 0) {
+                    doc.setFillColor(63, 199, 241);
+                    doc.setTextColor(255,255,255);
+                }
+            },
+            drawHeaderCell: function(cell, data){
+                doc.setFillColor(63, 199, 241);
+
+            }
+        });
+        doc.autoTable(res2.columns, res2.data, {
+            startY:doc.autoTable.previous.finalY + 15,
+            drawCell: function(cell, data) {
+                var rows = data.table.rows;
+                if (data.row.index == 0) {
+                    doc.setFillColor(63, 199, 241);
+                    doc.setTextColor(255,255,255);
+                }
+            },
+            drawHeaderCell: function(cell, data){
+                doc.setFillColor(63, 199, 241);
+
+            }
+        });
+        doc.autoTable(res3.columns, res3.data, {
+            startY:doc.autoTable.previous.finalY + 15,
+            drawCell: function(cell, data) {
+                var rows = data.table.rows;
+                if (data.row.index == 0) {
+                    doc.setFillColor(63, 199, 241);
+                    doc.setTextColor(255,255,255);
+                }
+            },
+            drawHeaderCell: function(cell, data){
+                doc.setFillColor(63, 199, 241);
+
+            }
+        });
     }else if(document.getElementsByTagName("table").length == 4){
         var res1 = doc.autoTableHtmlToJson(document.getElementById("table1"));
         var res2 = doc.autoTableHtmlToJson(document.getElementById("table2"));
         var res3 = doc.autoTableHtmlToJson(document.getElementById("table3"));
         var res4 = doc.autoTableHtmlToJson(document.getElementById("table4"));
-        doc.autoTable(res1.columns, res1.data, {startY:20});
-        doc.autoTable(res2.columns, res2.data, {startY:doc.autoTable.previous.finalY + 15});
-        doc.autoTable(res3.columns, res3.data, {startY:doc.autoTable.previous.finalY + 15});
-        doc.autoTable(res4.columns, res4.data, {startY:doc.autoTable.previous.finalY + 15});
+        doc.autoTable(res1.columns, res1.data, {
+            startY:20,
+            drawCell: function(cell, data) {
+                var rows = data.table.rows;
+                if (data.row.index == 0) {
+                    doc.setFillColor(63, 199, 241);
+                    doc.setTextColor(255,255,255);
+                }
+            },
+            drawHeaderCell: function(cell, data){
+                doc.setFillColor(63, 199, 241);
+
+            }
+        });
+        doc.autoTable(res2.columns, res2.data, {
+            startY:doc.autoTable.previous.finalY + 15,
+            drawCell: function(cell, data) {
+                var rows = data.table.rows;
+                if (data.row.index == 0) {
+                    doc.setFillColor(63, 199, 241);
+                    doc.setTextColor(255,255,255);
+                }
+            },
+            drawHeaderCell: function(cell, data){
+                doc.setFillColor(63, 199, 241);
+
+            }
+        });
+        doc.autoTable(res3.columns, res3.data, {
+            startY:doc.autoTable.previous.finalY + 15,
+            drawCell: function(cell, data) {
+                var rows = data.table.rows;
+                if (data.row.index == 0) {
+                    doc.setFillColor(63, 199, 241);
+                    doc.setTextColor(255,255,255);
+                }
+            },
+            drawHeaderCell: function(cell, data){
+                doc.setFillColor(63, 199, 241);
+
+            }
+        });
+        doc.autoTable(res4.columns, res4.data, {
+            startY:doc.autoTable.previous.finalY + 15,
+            drawCell: function(cell, data) {
+                var rows = data.table.rows;
+                if (data.row.index == 0) {
+                    doc.setFillColor(63, 199, 241);
+                    doc.setTextColor(255,255,255);
+                }
+            },
+            drawHeaderCell: function(cell, data){
+                doc.setFillColor(63, 199, 241);
+
+            }
+        });
     }
 
     var pdfOutput = doc.output();
