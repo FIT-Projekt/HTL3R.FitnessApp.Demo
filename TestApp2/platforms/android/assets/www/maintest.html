@@ -15,24 +15,9 @@
             font-family:"Arial";
            
         }
-        div{
-            height: calc(100vh - 5vh);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-        }
-        div h2{
-            text-align: center;
-            width: 90vw;
-            padding-top: 5vh;
-            padding-bottom: 5vh;
-            background-color: #3fc7f1;
-            color: white;
-        }
-        
+
         nav {
-			height:5vh;
+			height:20px;
 			position:fixed;
 			width:100%;
 			left:0;
@@ -42,13 +27,161 @@
             background-color: black;
             padding-top: 10px;
             padding-bottom: 10px;
-
 		}
         	
 		img {
-			width:5vh;
+			width:30px;
+            height: 30px;
 		}
-			
+
+        #geschlaecht{
+            
+            height: calc(100vh - 40px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        #erfahrung{
+            
+            height: calc(100vh - 40px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        #typ{
+            height: calc(100vh - 40px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 100%;
+            margin: 0 auto;
+
+        }
+
+        #art{
+            height: calc(100vh - 40px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        #split{
+            height: calc(100vh - 40px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        #zusatz{
+            height: 40px;
+        }
+
+
+
+        #geschlaecht div{
+            height: 50%;
+            background-color: #3fc7f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 10px solid white;
+        }
+
+        #geschlaecht div:first-child{
+            border-bottom: none;
+        }
+
+        #erfahrung div{
+            
+            height: 50%;
+            background-color: #3fc7f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 10px solid white;
+        }
+
+        #erfahrung div:first-child{
+            border-bottom: none;
+        }
+
+        #typ div{
+            
+            height: calc((100% / 3));
+            background-color: #3fc7f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 10px solid white;
+            position: relative;
+        }
+
+        #typ div:first-child{
+            border-bottom: none;
+        }
+
+        #typ div:nth-child(2){
+            border-bottom: none;
+        }
+		
+        #art div{
+            
+            height: calc((100% / 3));
+            background-color: #3fc7f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 10px solid white;
+        }
+
+        #art div:first-child{
+            border-bottom: none;
+        }
+
+        #art div:nth-child(2){
+            border-bottom: none;
+        }
+
+        #split div{
+            
+            height: calc((100% / 3));
+            background-color: #3fc7f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 10px solid white;
+        }
+
+        #split div:first-child{
+            border-bottom: none;
+        }
+
+        #split div:nth-child(2){
+            border-bottom: none;
+        }
+
+        div h2{
+            color: white;
+        }
+
+        div img{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            
+        }
+
+
     </style>
 
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
@@ -86,29 +219,58 @@
     </head>
     <body onload="onLoad()">
         <div id="geschlaecht">
-            <h2 id="man">Männlich</h2>
-            <h2 id="frau">Weiblich</h2> 
+            <div id="man">
+                <h2>Männlich</h2>
+            </div>
+            <div id="frau">
+                <h2>Weiblich</h2>
+            </div>
         </div>
         <div id="erfahrung">
-            <h2 id="fort">Fortgeschritten</h2>
-            <h2 id="anf">Anfänger</h2> 
+            <div id="fort">
+                <h2>Fortgeschritten</h2>
+            </div>
+            <div id="anf">
+                <h2>Anfänger</h2>
+            </div>
         </div>
         <div id="typ">
-            <h2 id="endo">Endomorph</h2>
-            <h2 id="erdo">Erdomorph</h2>
-            <h2 id="meso">Mesomorph</h2> 
+            <div id="endo">
+                <h2>Endomorph</h2>
+                <img id="fr1" src="img/fragezeichen.png">
+            </div>
+            <div id="erdo">
+                <h2>Ektomorph</h2>
+                <img id="fr2" src="img/fragezeichen.png">
+            </div>
+            <div id="meso">
+                <h2>Mesomorph</h2>
+                <img id="fr3" src="img/fragezeichen.png">
+            </div>
         </div>
         <div id="art">
-            <h2 id="aufbau">Muskelaufbau</h2>
-            <h2 id="abnehmen">Abnehmen</h2>
-            <h2 id="fitness">Fitness</h2> 
+            <div id="aufbau">
+                <h2>Muskelaufbau</h2>
+            </div>
+            <div id="abnehmen">
+                <h2>Abnehmen</h2>
+            </div>
+            <div id="fitness">
+                <h2>Fitness</h2>
+            </div>
         </div>
         <div id="split">
-            <h2 id="zwei">2er-Split</h2>
-            <h2 id="drei">3er-Split</h2>
-            <h2 id="vier">4er-Split</h2> 
+            <div id="zwei">
+                <h2>2er-Split</h2>
+            </div>
+            <div id="drei">
+                <h2>3er-Split</h2>
+            </div>
+            <div id="vier">
+                <h2>4er-Split</h2>
+            </div>
         </div>
-         <div>&nbsp;</div>
+        <div id="zusatz">&nbsp;</div>
         <nav>
     		
     			<img id="info" src="img/navinfo_white.png">
@@ -120,42 +282,61 @@
     	</nav>
         
         <script type="text/javascript">
-        var heightOfNav = $("nav").height();
-        var h = window.innerHeight;
-        h = h - heightOfNav;
-        console.log(heightOfNav);
+            var h;
 
             $("#man").click(function(){
+                h = ($(window).height()) - ($("nav").height() + 20);
                 localStorage.setItem("geschlaecht","Mann");
                 window.scrollTo(0,h);
             });
             $("#frau").click(function(){
+                h = ($(window).height()) - ($("nav").height() + 20);
                 localStorage.setItem("geschlaecht","Frau");
                 window.scrollTo(0,h);
             });
 
-
-
-
             $("#fort").click(function(){
+                h = ($(window).height()) - ($("nav").height() + 20);
                 localStorage.setItem("erfahrung","Fortgeschritten");
                 window.scrollTo(0,h*2);
             });
             $("#anf").click(function(){
+                h = ($(window).height()) - ($("nav").height() + 20);
                 localStorage.setItem("erfahrung","Anfanger");
                 window.scrollTo(0,h*2);
             });
 
 
+
+
+            $("#fr1").click(function(){
+                window.location = "typen.html#endomorph";
+            });
+
+            $("#fr2").click(function(){
+                window.location = "typen.html#ektomorph";
+            });
+
+            $("#fr3").click(function(){
+                window.location = "typen.html#mesomorph";
+            });
+
+
+
+
+
             $("#endo").click(function(){
+                h = ($(window).height()) - ($("nav").height() + 20);
                 localStorage.setItem("typ","Endomorph");
                 window.scrollTo(0,h*3);
             });
             $("#erdo").click(function(){
-                localStorage.setItem("typ","Erdomorph");
+                h = ($(window).height()) - ($("nav").height() + 20);
+                localStorage.setItem("typ","Ektomorph");
                 window.scrollTo(0,h*3);
             });
             $("#meso").click(function(){
+                h = ($(window).height()) - ($("nav").height() + 20);
                 localStorage.setItem("typ","Mesomorph");
                 window.scrollTo(0,h*3);
             });
@@ -164,14 +345,17 @@
 
 
             $("#aufbau").click(function(){
+                h = ($(window).height()) - ($("nav").height() + 20);
                 localStorage.setItem("art","Muskelaufbau");
                 window.scrollTo(0,h*4);
             });
             $("#abnehmen").click(function(){
+                h = ($(window).height()) - ($("nav").height() + 20);
                 localStorage.setItem("art","Abnehmen");
                 window.scrollTo(0,h*4);
             });
             $("#fitness").click(function(){
+                h = ($(window).height()) - ($("nav").height() + 20);
                 localStorage.setItem("art","Fitness");
                 window.scrollTo(0,h*4);
             });
