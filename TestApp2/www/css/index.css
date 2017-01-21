@@ -10,6 +10,7 @@
 html, body{
 	height: 100vh;
 	background-color: #3fc7f1;
+    font-family:"Arial";
 }
 .your-class{
 	min-width: 200px;

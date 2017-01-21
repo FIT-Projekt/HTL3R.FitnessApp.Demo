@@ -15,7 +15,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady(){
     document.getElementById("settings").addEventListener("click",function(){
-        navigator.notification.alert("Diese Funktion ist derzeit noch nicht verfügbar", function(){}, "Fehler", "OK");    
+        navigator.notification.alert("Diese Funktion ist derzeit noch nicht verfuegbar", function(){}, "Fehler", "OK");    
     });
     document.getElementById("info").addEventListener("click",function(){
         window.location = "about.html";
@@ -28,39 +28,39 @@ function onBackKeyDown() {
     window.location = "maintest.html";           
 }
 
-//Frauen Anfänger Übungen
-var brustUebungenFrauAnf = new Array("Butterfly","Kurzhantelschrägbankdrücken","Reverse-Flies(G)");
-var schulterUebungenFrauAnf = new Array("Seitheben","Frontheben(KZ)","Hanteldrücken");
+//Frauen Anfaenger uebungen
+var brustUebungenFrauAnf = new Array("Butterfly","Kurzhantelschraegbankdr.","Reverse-Flies(G)");
+var schulterUebungenFrauAnf = new Array("Seitheben","Frontheben(KZ)","Hanteldruecken");
 var bizepsUebungenFrauAnf = new Array("Bizepscurls","Hammercurls");
-var trizepsUebungenFrauAnf = new Array("Trizepsdrücken(KZ)","Arnold-Dips");
-var rueckenUebungenFrauAnf = new Array("Lattzug","Rudern(KZ)","Rückenstrecken");
+var trizepsUebungenFrauAnf = new Array("Trizepsdruecken(KZ)","Arnold-Dips");
+var rueckenUebungenFrauAnf = new Array("Lattzug","Rudern(KZ)","Rueckenstrecken");
 var bauchUebungenFrauAnf = new Array("Crunches","Beinheben");
 var beinPoUebungenFrauAnf = new Array("Beinpresse","Beinstrecker","Kickbacks","Ausfallschritt");
 
-//Frauen Fortgeschritten Übungen
-var brustUebungenFrauFort = new Array("Butterfly","Kurzhantelschrägbankdrücken","Reverse-Flies(G)");
-var schulterUebungenFrauFort = new Array("Seitheben","Frontheben(KZ)","Hanteldrücken");
+//Frauen Fortgeschritten uebungen
+var brustUebungenFrauFort = new Array("Butterfly","Kurzhantelschraegbankdr.","Reverse-Flies(G)");
+var schulterUebungenFrauFort = new Array("Seitheben","Frontheben(KZ)","Hanteldruecken");
 var bizepsUebungenFrauFort = new Array("Bizepscurls","Hammercurls");
-var trizepsUebungenFrauFort = new Array("Trizepsdrücken(KZ)","Arnold-Dips");
-var rueckenUebungenFrauFort = new Array("Lattzug","Rudern(KZ)","Rückenstrecken","Kreuzheben");
+var trizepsUebungenFrauFort = new Array("Trizepsdruecken(KZ)","Arnold-Dips");
+var rueckenUebungenFrauFort = new Array("Lattzug","Rudern(KZ)","Rueckenstrecken","Kreuzheben");
 var bauchUebungenFrauFort = new Array("Crunches","Beinheben","Reverse-Crunch");
 var beinPoUebungenFrauFort = new Array("Beinpresse","Beinstrecker","Kickbacks","Ausfallschritt","Kniebeugen","Abduktoren(G)");
 
-//Mann Anfänger Übungen
-var brustUebungenMannAnf = new Array("Bankdrücken","Kurzhantelschrägbankdrücken","Pull Over");
-var schulterUebungenMannAnf = new Array("Reverse-Flies(KZ)","Frontheben(KZ)","Kurzhalntelschulterdrücken");
+//Mann Anfaenger uebungen
+var brustUebungenMannAnf = new Array("Bankdruecken","Kurzhantelschraegbankdr.","Pull Over");
+var schulterUebungenMannAnf = new Array("Reverse-Flies(KZ)","Frontheben(KZ)","Kurzhantelschulterdr.");
 var bizepsUebungenMannAnf = new Array("Bizepscurls","Hammercurls","Langhantelcurls");
-var trizepsUebungenMannAnf = new Array("Trizepsdrücken(KZ)","Trizeps-Dips","Stirndrücken");
-var rueckenUebungenMannAnf = new Array("Lattzug","Rudern(KZ)","Klimmzüge");
+var trizepsUebungenMannAnf = new Array("Trizepsdruecken(KZ)","Trizeps-Dips","Stirndruecken");
+var rueckenUebungenMannAnf = new Array("Lattzug","Rudern(KZ)","Klimmzuege");
 var bauchUebungenMannAnf = new Array("Crunches","Sit-Ups");
 var beinPoUebungenMannAnf = new Array("Beinpresse","Beinstrecker","Abduktion(KZ)");
 
-//Mann Fortgeschritten Übungen
-var brustUebungenMannFort = new Array("Bankdrücken","Kurzhantelschrägbankdrücken","Pull Over","Reverse-Flies(G)");
-var schulterUebungenMannFort = new Array("Reverse-Flies(KZ)","Frontheben(KZ)","Kurzhalntelschulterdrücken","Seitheben");
+//Mann Fortgeschritten uebungen
+var brustUebungenMannFort = new Array("Bankdruecken","Kurzhantelschraegbankdr.","Pull Over","Reverse-Flies(G)");
+var schulterUebungenMannFort = new Array("Reverse-Flies(KZ)","Frontheben(KZ)","Kurzhantelschulterdr.","Seitheben");
 var bizepsUebungenMannFort = new Array("Bizepscurls","Hammercurls","Langhantelcurls","Kurzhantelbizepscurls");
-var trizepsUebungenMannFort = new Array("Trizepsdrücken(KZ)","Trizeps-Dips","Stirndrücken");
-var rueckenUebungenMannFort = new Array("Lattzug","Rudern(KZ)","Klimmzüge","Kreuzheben","Langhantelrudern");
+var trizepsUebungenMannFort = new Array("Trizepsdruecken(KZ)","Trizeps-Dips","Stirndruecken");
+var rueckenUebungenMannFort = new Array("Lattzug","Rudern(KZ)","Klimmzuege","Kreuzheben","Langhantelrudern");
 var bauchUebungenMannFort = new Array("Crunches","Sit-Ups","Reverse-Crunch","Sit-Ups-negativ");
 var beinPoUebungenMannFort = new Array("Beinpresse","Beinstrecker","Abduktion(KZ)","Kniebeugen","stehendes Wadenheben");
 
@@ -712,25 +712,142 @@ function createFile(){
     if(document.getElementsByTagName("table").length == 2){
         var res1 = doc.autoTableHtmlToJson(document.getElementById("table1"));
         var res2 = doc.autoTableHtmlToJson(document.getElementById("table2"));
-        doc.autoTable(res1.columns, res1.data, {startY:20});
-        doc.autoTable(res2.columns, res2.data, {startY:doc.autoTable.previous.finalY + 15});
+        doc.autoTable(res1.columns, res1.data, {
+            startY:20,
+            drawCell: function(cell, data) {
+                var rows = data.table.rows;
+                if (data.row.index == 0) {
+                    doc.setFillColor(63, 199, 241);
+                    doc.setTextColor(255,255,255);
+                }
+            },
+            drawHeaderCell: function(cell, data){
+                doc.setFillColor(63, 199, 241);
+
+            }
+        });
+        doc.autoTable(res2.columns, res2.data, {
+            startY:doc.autoTable.previous.finalY + 15,
+            drawCell: function(cell, data) {
+                var rows = data.table.rows;
+                if (data.row.index == 0) {
+                    doc.setFillColor(63, 199, 241);
+                    doc.setTextColor(255,255,255);
+                }
+            },
+            drawHeaderCell: function(cell, data){
+                doc.setFillColor(63, 199, 241);
+
+            }
+        });
         
     }else if(document.getElementsByTagName("table").length == 3){
         var res1 = doc.autoTableHtmlToJson(document.getElementById("table1"));
         var res2 = doc.autoTableHtmlToJson(document.getElementById("table2"));
         var res3 = doc.autoTableHtmlToJson(document.getElementById("table3"));
-        doc.autoTable(res1.columns, res1.data, {startY:20});
-        doc.autoTable(res2.columns, res2.data, {startY:doc.autoTable.previous.finalY + 15});
-        doc.autoTable(res3.columns, res3.data, {startY:doc.autoTable.previous.finalY + 15});
+        doc.autoTable(res1.columns, res1.data, {
+            startY:20,
+            drawCell: function(cell, data) {
+                var rows = data.table.rows;
+                if (data.row.index == 0) {
+                    doc.setFillColor(63, 199, 241);
+                    doc.setTextColor(255,255,255);
+                }
+            },
+            drawHeaderCell: function(cell, data){
+                doc.setFillColor(63, 199, 241);
+
+            }
+        });
+        doc.autoTable(res2.columns, res2.data, {
+            startY:doc.autoTable.previous.finalY + 15,
+            drawCell: function(cell, data) {
+                var rows = data.table.rows;
+                if (data.row.index == 0) {
+                    doc.setFillColor(63, 199, 241);
+                    doc.setTextColor(255,255,255);
+                }
+            },
+            drawHeaderCell: function(cell, data){
+                doc.setFillColor(63, 199, 241);
+
+            }
+        });
+        doc.autoTable(res3.columns, res3.data, {
+            startY:doc.autoTable.previous.finalY + 15,
+            drawCell: function(cell, data) {
+                var rows = data.table.rows;
+                if (data.row.index == 0) {
+                    doc.setFillColor(63, 199, 241);
+                    doc.setTextColor(255,255,255);
+                }
+            },
+            drawHeaderCell: function(cell, data){
+                doc.setFillColor(63, 199, 241);
+
+            }
+        });
     }else if(document.getElementsByTagName("table").length == 4){
         var res1 = doc.autoTableHtmlToJson(document.getElementById("table1"));
         var res2 = doc.autoTableHtmlToJson(document.getElementById("table2"));
         var res3 = doc.autoTableHtmlToJson(document.getElementById("table3"));
         var res4 = doc.autoTableHtmlToJson(document.getElementById("table4"));
-        doc.autoTable(res1.columns, res1.data, {startY:20});
-        doc.autoTable(res2.columns, res2.data, {startY:doc.autoTable.previous.finalY + 15});
-        doc.autoTable(res3.columns, res3.data, {startY:doc.autoTable.previous.finalY + 15});
-        doc.autoTable(res4.columns, res4.data, {startY:doc.autoTable.previous.finalY + 15});
+        doc.autoTable(res1.columns, res1.data, {
+            startY:20,
+            drawCell: function(cell, data) {
+                var rows = data.table.rows;
+                if (data.row.index == 0) {
+                    doc.setFillColor(63, 199, 241);
+                    doc.setTextColor(255,255,255);
+                }
+            },
+            drawHeaderCell: function(cell, data){
+                doc.setFillColor(63, 199, 241);
+
+            }
+        });
+        doc.autoTable(res2.columns, res2.data, {
+            startY:doc.autoTable.previous.finalY + 15,
+            drawCell: function(cell, data) {
+                var rows = data.table.rows;
+                if (data.row.index == 0) {
+                    doc.setFillColor(63, 199, 241);
+                    doc.setTextColor(255,255,255);
+                }
+            },
+            drawHeaderCell: function(cell, data){
+                doc.setFillColor(63, 199, 241);
+
+            }
+        });
+        doc.autoTable(res3.columns, res3.data, {
+            startY:doc.autoTable.previous.finalY + 15,
+            drawCell: function(cell, data) {
+                var rows = data.table.rows;
+                if (data.row.index == 0) {
+                    doc.setFillColor(63, 199, 241);
+                    doc.setTextColor(255,255,255);
+                }
+            },
+            drawHeaderCell: function(cell, data){
+                doc.setFillColor(63, 199, 241);
+
+            }
+        });
+        doc.autoTable(res4.columns, res4.data, {
+            startY:doc.autoTable.previous.finalY + 15,
+            drawCell: function(cell, data) {
+                var rows = data.table.rows;
+                if (data.row.index == 0) {
+                    doc.setFillColor(63, 199, 241);
+                    doc.setTextColor(255,255,255);
+                }
+            },
+            drawHeaderCell: function(cell, data){
+                doc.setFillColor(63, 199, 241);
+
+            }
+        });
     }
 
     var pdfOutput = doc.output();
@@ -776,10 +893,10 @@ function createTable(){
         r = t.insertRow(1);
         r.className = "desc"; 
         c = r.insertCell(0);
-        c.innerHTML = "Übung";
+        c.innerHTML = "Uebung";
         c.style.fontWeight = "bold";
         c = r.insertCell(1);
-        c.innerHTML = "Sätze";
+        c.innerHTML = "Saetze";
         c.style.fontWeight = "bold";
         c = r.insertCell(2);
         c.innerHTML = "Wdh.";
@@ -866,10 +983,10 @@ function createTable(){
         r = t.insertRow(1); 
         r.className = "desc";
         c = r.insertCell(0);
-        c.innerHTML = "Übung";
+        c.innerHTML = "Uebung";
         c.style.fontWeight = "bold";
         c = r.insertCell(1);
-        c.innerHTML = "Sätze";
+        c.innerHTML = "Saetze";
         c.style.fontWeight = "bold";
         c = r.insertCell(2);
         c.innerHTML = "Wdh.";
@@ -946,10 +1063,10 @@ function createTable(){
         r = t.insertRow(1);
         r.className = "desc";
         c = r.insertCell(0);
-        c.innerHTML = "Übung";
+        c.innerHTML = "Uebung";
         c.style.fontWeight = "bold";
         c = r.insertCell(1);
-        c.innerHTML = "Sätze";
+        c.innerHTML = "Saetze";
         c.style.fontWeight = "bold";
         c = r.insertCell(2);
         c.innerHTML = "Wdh.";
@@ -1019,10 +1136,10 @@ function createTable(){
         r = t.insertRow(1);
         r.className = "desc";
         c = r.insertCell(0);
-        c.innerHTML = "Übung";
+        c.innerHTML = "Uebung";
         c.style.fontWeight = "bold";
         c = r.insertCell(1);
-        c.innerHTML = "Sätze";
+        c.innerHTML = "Saetze";
         c.style.fontWeight = "bold";
         c = r.insertCell(2);
         c.innerHTML = "Wdh.";
@@ -1087,10 +1204,10 @@ function createTable(){
         r = t.insertRow(1);
         r.className = "desc";
         c = r.insertCell(0);
-        c.innerHTML = "Übung";
+        c.innerHTML = "Uebung";
         c.style.fontWeight = "bold";
         c = r.insertCell(1);
-        c.innerHTML = "Sätze";
+        c.innerHTML = "Saetze";
         c.style.fontWeight = "bold";
         c = r.insertCell(2);
         c.innerHTML = "Wdh.";
@@ -1157,10 +1274,10 @@ function createTable(){
         r = t.insertRow(1);
         r.className = "desc";
         c = r.insertCell(0);
-        c.innerHTML = "Übung";
+        c.innerHTML = "Uebung";
         c.style.fontWeight = "bold";
         c = r.insertCell(1);
-        c.innerHTML = "Sätze";
+        c.innerHTML = "Saetze";
         c.style.fontWeight = "bold";
         c = r.insertCell(2);
         c.innerHTML = "Wdh.";
@@ -1222,10 +1339,10 @@ function createTable(){
         r = t.insertRow(1);
         r.className = "desc";
         c = r.insertCell(0);
-        c.innerHTML = "Übung";
+        c.innerHTML = "Uebung";
         c.style.fontWeight = "bold";
         c = r.insertCell(1);
-        c.innerHTML = "Sätze";
+        c.innerHTML = "Saetze";
         c.style.fontWeight = "bold";
         c = r.insertCell(2);
         c.innerHTML = "Wdh.";
@@ -1273,10 +1390,10 @@ function createTable(){
         r = t.insertRow(1);
         r.className = "desc";
         c = r.insertCell(0);
-        c.innerHTML = "Übung";
+        c.innerHTML = "Uebung";
         c.style.fontWeight = "bold";
         c = r.insertCell(1);
-        c.innerHTML = "Sätze";
+        c.innerHTML = "Saetze";
         c.style.fontWeight = "bold";
         c = r.insertCell(2);
         c.innerHTML = "Wdh.";
@@ -1341,10 +1458,10 @@ function createTable(){
         r = t.insertRow(1);
         r.className = "desc"; 
         c = r.insertCell(0);
-        c.innerHTML = "Übung";
+        c.innerHTML = "Uebung";
         c.style.fontWeight = "bold";
         c = r.insertCell(1);
-        c.innerHTML = "Sätze";
+        c.innerHTML = "Saetze";
         c.style.fontWeight = "bold";
         c = r.insertCell(2);
         c.innerHTML = "Wdh.";

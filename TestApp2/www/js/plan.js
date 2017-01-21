@@ -48,7 +48,7 @@ var beinPoUebungenFrauFort = new Array("Beinpresse","Beinstrecker","Kickbacks","
 
 //Mann Anfaenger uebungen
 var brustUebungenMannAnf = new Array("Bankdruecken","Kurzhantelschraegbankdr.","Pull Over");
-var schulterUebungenMannAnf = new Array("Reverse-Flies(KZ)","Frontheben(KZ)","Kurzhalntelschulterdruecken");
+var schulterUebungenMannAnf = new Array("Reverse-Flies(KZ)","Frontheben(KZ)","Kurzhantelschulterdr.");
 var bizepsUebungenMannAnf = new Array("Bizepscurls","Hammercurls","Langhantelcurls");
 var trizepsUebungenMannAnf = new Array("Trizepsdruecken(KZ)","Trizeps-Dips","Stirndruecken");
 var rueckenUebungenMannAnf = new Array("Lattzug","Rudern(KZ)","Klimmzuege");
@@ -57,7 +57,7 @@ var beinPoUebungenMannAnf = new Array("Beinpresse","Beinstrecker","Abduktion(KZ)
 
 //Mann Fortgeschritten uebungen
 var brustUebungenMannFort = new Array("Bankdruecken","Kurzhantelschraegbankdr.","Pull Over","Reverse-Flies(G)");
-var schulterUebungenMannFort = new Array("Reverse-Flies(KZ)","Frontheben(KZ)","Kurzhalntelschulterdruecken","Seitheben");
+var schulterUebungenMannFort = new Array("Reverse-Flies(KZ)","Frontheben(KZ)","Kurzhantelschulterdr.","Seitheben");
 var bizepsUebungenMannFort = new Array("Bizepscurls","Hammercurls","Langhantelcurls","Kurzhantelbizepscurls");
 var trizepsUebungenMannFort = new Array("Trizepsdruecken(KZ)","Trizeps-Dips","Stirndruecken");
 var rueckenUebungenMannFort = new Array("Lattzug","Rudern(KZ)","Klimmzuege","Kreuzheben","Langhantelrudern");
