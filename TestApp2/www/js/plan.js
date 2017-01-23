@@ -74,6 +74,7 @@ var beinPo = [];
 
 var c, r, t, b, h;
 var path = "";
+var funktionFertig = false;
 
 function checkArt(){
     if(localStorage.getItem("art") == "Muskelaufbau"){
@@ -855,6 +856,21 @@ function checkData4(){
     }
 }
 
+function showFile(){
+    cordova.plugins.fileOpener2.open(
+                                     path, // You can also use a Cordova-style file uri: cdvfile://localhost/persistent/Download/starwars.pdf
+                                     'application/pdf',
+                                     {
+                                     error : function(e) {
+                                     console.log('Error status: ' + e.status + ' - Error message: ' + e.message);
+                                     },
+                                     success : function () {
+                                     console.log('file opened successfully');
+                                     }
+                                     }
+                                     );
+}
+
 function createFile(){
     var doc = new jsPDF("p","pt","a4");
     if(document.getElementsByTagName("table").length == 3){
@@ -1009,7 +1025,8 @@ function createFile(){
                     alert("Error" + error);
                 });
                 path = file.toURL();
-                navigator.notification.alert("Dein Trainingsplan befinet sich nun unter: " + "\n\n" + file.toURL(), function(){}, "Erfolgreich als PDF exportiert", "OK");
+                /*navigator.notification.alert("Dein Trainingsplan befinet sich nun unter: " + "\n\n" + file.toURL(), function(){}, "Erfolgreich als PDF exportiert", "OK");*/
+                        showFile();
             });
         });
     }else if(device.platform == "iOS"){
@@ -1020,11 +1037,17 @@ function createFile(){
                 },function(error){
                     alert("Error" + error);
                 });
-                path = file.toUrl();
-                navigator.notification.alert("Dein Trainingsplan befinet sich nun unter: " + "\n\n" + file.toURL(), function(){}, "Erfolgreich als PDF exportiert", "OK");
+                path = file.toURL();
+                /*navigator.notification.alert("Dein Trainingsplan befinet sich nun unter: " + "\n\n" + file.toURL(), function(){}, "Erfolgreich als PDF exportiert", "OK");*/
+                        
+                        showFile();
+                        
+                        
             });
         });
     }
+    
+    
 }
 
 function createTable(){
@@ -1666,22 +1689,6 @@ function createTable(){
     createButton();
 }
 
-function showFile(){
-    console.log(path);
-    cordova.plugins.fileOpener2.open(
-        path, // You can also use a Cordova-style file uri: cdvfile://localhost/persistent/Download/starwars.pdf
-        'application/pdf', 
-        { 
-            error : function(e) { 
-                alert('Error status: ' + e.status + ' - Error message: ' + e.message);
-            },
-            success : function () {
-                alert('file opened successfully');                
-            }
-        }
-    );
-}
-
 function createButton(){
     b = document.createElement("button");
     b.id = "export";
@@ -1689,8 +1696,5 @@ function createButton(){
     document.body.appendChild(b);
     b.addEventListener("click",function(){
         createFile();
-        setTimeout(function(){
-            showFile();
-        },1000);
     });
 }
