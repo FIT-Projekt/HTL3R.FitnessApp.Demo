@@ -72,7 +72,154 @@ var ruecken = [];
 var bauch = [];
 var beinPo = [];
 
-var c, r, t, b;
+var c, r, t, b, h;
+
+function checkArt(){
+    if(localStorage.getItem("art") == "Muskelaufbau"){
+
+        h = document.createElement("h1");
+        h.appendChild(document.createTextNode("Wichtiges"));
+        document.body.appendChild(h);
+
+        t = document.createElement('table');
+        t.id = "wichtig";
+
+        r = t.insertRow(0); 
+        c = r.insertCell(0);
+        c.innerHTML = "Proteinhaltige Ernährung!";
+        c.className = "name";
+        c = r.insertCell(1);
+        c.innerHTML = "Das beste Training nützt nichts, wenn der Körper nicht die nötige Energie erhält. Als Faustregel für den Muskelaufbau, kann man sich an 2-3g Eiweiß pro Kilo Körpergewicht halten, aufgeteilt auf zirka 6 Mahlzeiten am Tag.";
+
+        r = t.insertRow(1); 
+        c = r.insertCell(0);
+        c.innerHTML = "Cardio nach dem Krafttraining!";
+        c.className = "name";
+        c = r.insertCell(1);
+        c.innerHTML = "Wird in der Regel gerne am Anfang vom Training gemacht, sollte aber beim Ziel Muskelaufbau unbedingt nach dem Krafttraining erfolgen. So hast du maximale Energie/Kraft, um deine Muskeln zu reizen. Beim anschließenden Cardio benötigst du diese Maximalkraft nicht mehr. ";
+
+        r = t.insertRow(2); 
+        c = r.insertCell(0);
+        c.innerHTML = "Periodisierung des Trainings einführen ";
+        c.className = "name";
+        c = r.insertCell(1);
+        c.innerHTML = "Alle 6-8 Wochen regelmäßig die Trainingsart wechseln. Der Körper gewöhnt sich rasch an eine Anstrengung und danach stagniert der Trainingserfolg. ";
+
+        r = t.insertRow(3); 
+        c = r.insertCell(0);
+        c.innerHTML = "Kalorienzufuhr beachten ";
+        c.className = "name";
+        c = r.insertCell(1);
+        c.innerHTML = "Für den Muskelaufbau braucht der Köper einen leichten Kalorienüberschuss von zirka 500 Kalorien. ";
+
+        r = t.insertRow(4); 
+        c = r.insertCell(0);
+        c.innerHTML = "Trainiere den ganzen Körper! ";
+        c.className = "name";
+        c = r.insertCell(1);
+        c.innerHTML = "Oft vernachlässigen besonders Anfänger entscheidende Muskelgruppen (z.B. Bein-, Gesäß-, untere Rückenmuskeln). Das kann zu körperlichen Problemen führen, fehlender Rumpfstabilität und oder ab einem gewissen Punkt den Fortschritt stoppen. ";
+
+        document.body.appendChild(t);
+
+        t.style.marginTop = "8px";
+
+    }else if(localStorage.getItem("art") == "Abnehmen"){
+
+        h = document.createElement("h1");
+        h.appendChild(document.createTextNode("Wichtiges"));
+        document.body.appendChild(h);
+
+        t = document.createElement('table');
+        t.id = "wichtig";
+
+        r = t.insertRow(0); 
+        c = r.insertCell(0);
+        c.innerHTML = "Kleine Ziele setzen ";
+        c.className = "name";
+        c = r.insertCell(1);
+        c.innerHTML = "Setzt euch beim Abnehmen realistische Ziele. 1/2 bzw. maximal 1 Kilo pro Woche sind machbar. Im Monat kann man 2 bis 3 Kilo schaffen.Von der Vorstellung 3 Kilo in 3 Tagen abzunehmen oder 15 Kilo in 6 Wochen, solltet ihr euch verabschieden, wenn ihr richtig und langfristig abnehmen wollt. ";
+
+        r = t.insertRow(1); 
+        c = r.insertCell(0);
+        c.innerHTML = "Langsamer Gewichtsverlust ";
+        c.className = "name";
+        c = r.insertCell(1);
+        c.innerHTML = "Beim Abnehmen ist es wichtig, möglichst vielseitig zu essen. Tipp für kalorienarme Gerichte, die lange satt machen: Fleisch, Fisch oder Milchprodukte mit Salat, Gemüse und Obst kombinieren. Auch Vollkornlebensmittel sättigen lange. ";
+
+        r = t.insertRow(2); 
+        c = r.insertCell(0);
+        c.innerHTML = "Regelmäßige Mahlzeiten ";
+        c.className = "name";
+        c = r.insertCell(1);
+        c.innerHTML = "Wer abnehmen will, sollte regelmäßig essen. Das fängt beim Frühstück an.Mit dem täglichen Frühstück vermeidet man Leistungstiefs und Heißhunger. Wer nicht hungrig ist, sollte einen Saft oder ein Glas Milch trinken und später richtig frühstücken.Drei oder fünf Mahlzeiten? Entscheidet selbst. In der Wissenschaft gehen die Meinungen zu diesem Thema auseinander. Wichtig ist, dass ihr morgens, mittags und abends regelmäßig eine größere Mahlzeit esst, die sättigt und zufriedenstellt. ";
+
+        r = t.insertRow(3); 
+        c = r.insertCell(0);
+        c.innerHTML = "Essauslöser finden ";
+        c.className = "name";
+        c = r.insertCell(1);
+        c.innerHTML = "Stress, Ärger, Langeweile: Es gibt viele Gründe, warum wir essen. Hunger ist nur ein kleiner Teil davon.Beobachtet euch mal ein paar Tage lang und notiert, wann und warum ihr esst. Mit diesem Wissen im Hinterkopf stellt ihr eure Gewohnheiten um. Neigt ihr zum Stress-Essen, legt ihr regelmäßig Entspannungspausen ein. Langeweile-Esser sollten aktiver werden und sich neue Hobbys suchen oder mehr mit Freunden unternehmen. ";
+
+        r = t.insertRow(4); 
+        c = r.insertCell(0);
+        c.innerHTML = "Regelmäßige Bewegung ";
+        c.className = "name";
+        c = r.insertCell(1);
+        c.innerHTML = "Wer dauerhaft abnehmen möchte, kommt um Sport bzw. mehr Bewegung nicht herum. Das fängt im Alltag an. Macht nach dem Mittagessen einen 20-minütigen Spaziergang, erledigt Einkäufe etc. zu Fuß oder mit dem Rad und nehmt Treppen statt Aufzug und Rolltreppe. Auf die Weise integriert ihr locker 30 Minuten mehr Bewegung pro Tag in euer Leben. Dazu solltet ihr regelmäßig drei bis vier Mal pro Woche Ausdauer- und Kraftsport betreiben, wenn ihr richtig und langfristig abnehmen wollt. ";
+
+        document.body.appendChild(t);
+
+        t.style.marginTop = "8px";
+
+    }else if(localStorage.getItem("art") == "Fitness"){
+        
+        h = document.createElement("h1");
+        h.appendChild(document.createTextNode("Wichtiges"));
+        document.body.appendChild(h);
+
+        t = document.createElement('table');
+        t.id = "wichtig";
+
+        r = t.insertRow(0); 
+        c = r.insertCell(0);
+        c.innerHTML = "Den Alltag als Fitnesscenter nutzen";
+        c.className = "name";
+        c = r.insertCell(1);
+        c.innerHTML = "Statt den Aufzug oder die Rolltreppe zu nutzen, nehmen Sie einfach die Treppe. Denn besonders das regelmäßige Treppensteigen wirkt wahre Wunder. Ihr Kreislauf kommt in Schwung und gleichzeitig wirken sich Treppen positiv auf Ihre Gesäßmuskulatur aus. ";
+
+        r = t.insertRow(1); 
+        c = r.insertCell(0);
+        c.innerHTML = "Warm-Up und Cool-Down";
+        c.className = "name";
+        c = r.insertCell(1);
+        c.innerHTML = "Ihr Körper stellt dabei von der Alltagstätigkeit auf körperliche Betätigung um. Bewegen Sie sich während der ersten Minuten des Trainings langsam bzw. bei sehr niedrigem Puls. Zum Schluss des Trainings gilt es dann die Belastung wieder langsam zurückzufahren und dabei am besten nochmals kurz durchdehnen. ";
+        
+        r = t.insertRow(2); 
+        c = r.insertCell(0);
+        c.innerHTML = "Stellen Sie Ihre Ernährung dauerhaft um";
+        c.className = "name";
+        c = r.insertCell(1);
+        c.innerHTML = "Vermeiden Sie Fast Food und Fertigkost und verzichten Sie beim Frühstück nach und nach auf Brötchen und Weißbrot und essen Sie stattdessen Vollkornbrot. Essen Sie vermehrt Obst und Gemüse sowie fettarmes Fleisch. ";
+
+        r = t.insertRow(3); 
+        c = r.insertCell(0);
+        c.innerHTML = "Trinken Sie sich fit";
+        c.className = "name";
+        c = r.insertCell(1);
+        c.innerHTML = "Vermeiden Sie zuckerhaltige Getränke und trinken Sie zwischen 1,5 und 2 Liter Wasser pro Tag. Im Sommer oder bei körperlicher Betätigung dürfen es auch ein paar Liter mehr sein. ";
+
+        r = t.insertRow(4); 
+        c = r.insertCell(0);
+        c.innerHTML = "Bleiben Sie am Ball";
+        c.className = "name";
+        c = r.insertCell(1);
+        c.innerHTML = "Gerade was die sportliche Betätigung betrifft, empfiehlt es sich einen festen Plan aufzustellen. Setzen Sie sich immer wieder neue Ziele und halten Sie sich stets vor Augen, was Sie bisher alles erreicht haben. ";
+
+        document.body.appendChild(t);
+
+        t.style.marginTop = "8px";
+    }
+}
 
 function checkData2(){
     if(localStorage.getItem("geschlaecht") == "Frau"){
@@ -709,9 +856,10 @@ function checkData4(){
 
 function createFile(){
     var doc = new jsPDF("p","pt","a4");
-    if(document.getElementsByTagName("table").length == 2){
+    if(document.getElementsByTagName("table").length == 3){
         var res1 = doc.autoTableHtmlToJson(document.getElementById("table1"));
         var res2 = doc.autoTableHtmlToJson(document.getElementById("table2"));
+
         doc.autoTable(res1.columns, res1.data, {
             startY:20,
             drawCell: function(cell, data) {
@@ -741,7 +889,7 @@ function createFile(){
             }
         });
         
-    }else if(document.getElementsByTagName("table").length == 3){
+    }else if(document.getElementsByTagName("table").length == 4){
         var res1 = doc.autoTableHtmlToJson(document.getElementById("table1"));
         var res2 = doc.autoTableHtmlToJson(document.getElementById("table2"));
         var res3 = doc.autoTableHtmlToJson(document.getElementById("table3"));
@@ -787,7 +935,7 @@ function createFile(){
 
             }
         });
-    }else if(document.getElementsByTagName("table").length == 4){
+    }else if(document.getElementsByTagName("table").length == 5){
         var res1 = doc.autoTableHtmlToJson(document.getElementById("table1"));
         var res2 = doc.autoTableHtmlToJson(document.getElementById("table2"));
         var res3 = doc.autoTableHtmlToJson(document.getElementById("table3"));
@@ -1511,6 +1659,7 @@ function createTable(){
 
         t.style.marginTop = "8px";      
     }
+    checkArt();
     createButton();
 }
 
