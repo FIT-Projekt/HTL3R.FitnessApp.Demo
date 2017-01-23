@@ -23,6 +23,7 @@
 		E41969678AFA4372917EBE51 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5955D8D81384451DA82BE5B2 /* CDVNotification.bundle */; };
 		712F732FA67545B59AC220AF /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B487F71AF14765A40CB39C /* CDVDevice.m */; };
 		FFABD76A36C4489793F2C836 /* FileOpener2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D17DCBF1C431880352684 /* FileOpener2.m */; };
+		B8943B92417242B38254620D /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F202D5D5FB9443A94D189F5 /* CDVStatusBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		19750C7993B44621A7E0B85C /* CDVDevice.h */ = {isa = PBXFileReference; name = "CDVDevice.h"; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		2B2D17DCBF1C431880352684 /* FileOpener2.m */ = {isa = PBXFileReference; name = "FileOpener2.m"; path = "cordova-plugin-file-opener2/FileOpener2.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		9A7ED0FCC01D48329C15EB84 /* FileOpener2.h */ = {isa = PBXFileReference; name = "FileOpener2.h"; path = "cordova-plugin-file-opener2/FileOpener2.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		3F202D5D5FB9443A94D189F5 /* CDVStatusBar.m */ = {isa = PBXFileReference; name = "CDVStatusBar.m"; path = "cordova-plugin-statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		1C330FA4B8894F438F541404 /* CDVStatusBar.h */ = {isa = PBXFileReference; name = "CDVStatusBar.h"; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +206,8 @@
 				19750C7993B44621A7E0B85C /* CDVDevice.h */,
 				2B2D17DCBF1C431880352684 /* FileOpener2.m */,
 				9A7ED0FCC01D48329C15EB84 /* FileOpener2.h */,
+				3F202D5D5FB9443A94D189F5 /* CDVStatusBar.m */,
+				1C330FA4B8894F438F541404 /* CDVStatusBar.h */,
 			);
 			name = Plugins;
 			path = "Fitness-App/Plugins";
@@ -332,6 +337,7 @@
 				D47FC9062555493FB275C2A0 /* CDVViewController+SplashScreen.m in Sources */,
 				712F732FA67545B59AC220AF /* CDVDevice.m in Sources */,
 				FFABD76A36C4489793F2C836 /* FileOpener2.m in Sources */,
+				B8943B92417242B38254620D /* CDVStatusBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

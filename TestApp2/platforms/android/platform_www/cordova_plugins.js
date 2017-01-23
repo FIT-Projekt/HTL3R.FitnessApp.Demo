@@ -212,6 +212,14 @@ module.exports = [
         "clobbers": [
             "cordova.plugins.fileOpener2"
         ]
+    },
+    {
+        "id": "cordova-plugin-statusbar.statusbar",
+        "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+        "pluginId": "cordova-plugin-statusbar",
+        "clobbers": [
+            "window.StatusBar"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -223,7 +231,8 @@ module.exports.metadata =
     "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-file": "4.3.1",
     "cordova-plugin-device": "1.1.4",
-    "cordova-plugin-file-opener2": "2.0.3"
+    "cordova-plugin-file-opener2": "2.0.3",
+    "cordova-plugin-statusbar": "2.2.1"
 };
 // BOTTOM OF METADATA
 });
